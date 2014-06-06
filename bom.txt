@@ -1,29 +1,27 @@
-Qty     Part                            Desc                    Digi-key PN             Order Qty       Total Price
-1       "U1"                            arm cotex m0 mcu        LPC1114FDH28/102        1               2.91
-1       "U2"                            spi flash               1274-1051-ND            1               0.33
-1       "U3"                            i2c i/o expander        MCP23008-E/SO-ND        1               1.22
-1       "U4"                            3.3v regulator          MCP1252-33X50I/MS-ND    1               1.64
-1       "SW_BL"                         dip 1 pos               CKN10358-ND             1               1.12
-1       "SW_D"                          dip 2 pos               SW1009-ND               1               1.39
-1       "SW_PWR"                        slide sw                563-1099-1-ND           1               0.77
-2       "SW_P1,SW_P2"                   tactile sw              450-1792-1-ND           2               0.40
-4       "LED1,LED2,LED3,LED4"           green led               475-1410-1-ND           4               0.32
-1       "LED_PWR"                       red led                 475-1415-1-ND           1               0.08
-8       "R1,R7,R14,R15,R16,R17,R18,R19" r 0603 10k              RMCF0603JT10K0CT-ND     10              0.17
-2       "R8,R9"                         r 0603 1k               RMCF0603JT1K00CT-ND     10              0.17
-4       "R10,R11,R12,R13"               r 0603 100k             RMCF0603FT100KCT-ND     10              0.25
-4       "R2,R3,R4,R5"                   r 0805 for led 1.5k     RMCF0805JT1K50CT-ND     10              0.21
-1       "R6"                            r 0805 for led 1.8k     RMCF0805JT1K80CT-ND     10              0.21
-6       "R20,R21,R22,R23,R24,R25"       r 0402 0 jumper         RMCF0402ZT0R00CT-ND     10              0.17
-6       "C3,C4,C5,C6,C10,C11"           c 0603 0.1uf            1276-1006-1-ND          10              0.20
-2       "C9,C12"                        c 0805 1uf              1276-1029-1-ND          10              0.71
-2       "C7,C8"                         c 1206 10uf             1276-1804-1-ND          10              1.98
-1       "TP_3V3                         test point red          5005K-ND                1               0.35
-1       "TP_GND"                        test point black        5006K-ND                1               0.35
-1       "TP_RESET"                      test point orange       5008K-ND                1               0.35
-1       "TP_SWDCLK"                     test point blue         5122K-ND                1               0.35
-1       "TP_SWDIO"                      test point green        5121K-ND                1               0.35
-1       "JP_UART"                       6p header right angle   S1112EC-06-ND           1               0.20
-1       "JP_*"                          40p header break away   S1012EC-40-ND           1               0.51
-1       "CON_BAT"                       jst ph connector        455-1749-1-ND           1               0.56
-
+Qty     Part                                        Desc                    Digi-key PN                 Order Qty       Total Price
+1       "U1"                                        arm cotex m0 mcu        Arrow LPC1114FDH28/102:5    1               ~2.50
+1       "U2"                                        spi flash               1274-1052-ND                1               0.32
+1       "U3"                                        i2c i/o expander        MCP23008-E/SO-ND            1               1.22
+1       "U4"                                        3.3v regulator          MCP1252-33X50I/MS-ND        1               1.64
+1       "U5"                                        lipo charger            MCP73831T-2ACI/OTCT-ND      1               0.67
+8       "C3,C4,C5,C6,C10,C11,C13,C14"               c 0805 0.1uf            1276-1099-1-ND              10              0.44
+2       "C9,C12"                                    c 0805 1uf              1276-1066-1-ND              5               0.50
+2       "C15,C16"                                   c 0805 4.7uf            1276-1244-1-ND              5               0.75
+2       "C7,C8"                                     c 1206 10uf             1276-1075-1-ND              5               1.15
+8       "R1,R7,R8,R9,R14,R15,R16,R17,R18,R19,R27"   r 0805 10k              1276-5332-1-ND              15              0.30
+4       "R10,R11,R12,R13"                           r 0805 100k             1276-3512-1-ND              10              0.20
+6       "R20,R21,R22,R23,R24,R25"                   r 0603 0 jumper         RHM0.0CGCT-ND               10              0.10
+4       "LED1,LED2,LED3,LED4"                       green led               475-1407-1-ND               5               0.55
+1       "LED_PWR"                                   red led                 475-1416-1-ND               2               0.22
+1       "LED_CHG"                                   orange led              754-1140-1-ND               2               0.42
+5       "R2,R3,R4,R5,R26"                           r 0805 for led 1.5k     1276-5533-1-ND              10              0.18
+1       "R6"                                        r 0805 for led 2k       1276-5536-1-ND              10              0.18
+1       "CON_BAT"                                   jst ph connector        455-1749-1-ND               1               0.56
+1       "CON_USB"                                   usb mini-b connector    151-1206-1-ND               1               0.41
+1       "JP_*,TP_*"                                 40p header break away   S1012EC-30-ND               1               0.48
+1       "JP_UART"                                   6p header right angle   S1112EC-06-ND               1               0.23
+1       "SW_PWR"                                    slide sw                563-1095-1-ND               1               0.63
+2       "SW_B0,SW_B1"                               tactile sw              450-1792-1-ND               2               0.40
+1       "SW_DIP"                                    dip 2 pos               450-2045-ND                 1               0.81
+DNP     "C1,C2"                                     c 0805 xtal load caps   -                           -               -
+DNP     "Q1"                                        xtal                    -                           -               -

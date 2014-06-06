@@ -6,4 +6,6 @@ bmw.sts = bottom soldermask
 bmw.drd = excellon drill file
 
 Part Number: BMW
-Revision: 1
+Revision: 2
+X dimension: 2.756"
+Y dimension: 1.693"
