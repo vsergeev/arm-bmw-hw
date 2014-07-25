@@ -11729,7 +11729,7 @@ Based on TE part number 1981568-1</description>
 </classes>
 <parts>
 <part name="U1" library="ivan" deviceset="LPC1114FDH28" device=""/>
-<part name="U2" library="ivan" deviceset="S25FL208K" device=""/>
+<part name="U2" library="ivan" deviceset="S25FL208K" device="" value="S25FL216K"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
