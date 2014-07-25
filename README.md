@@ -20,7 +20,7 @@ GitHub: https://github.com/vsergeev/arm-bmw-hw
 
 The ARM Bare Metal Widget (arm-bmw) is an inexpensive, open hardware, 32-bit [Cortex-M0](http://www.arm.com/products/processors/cortex-m/cortex-m0.php) development board with a focus on I/O, battery power, non-volatile storage, and debug-ability.
 
-The arm-bmw is suitable for a general purpose embedded controller and a battery-powered data logger. It features an onboard 2-megabyte flash memory for storage, lithium polymer battery and USB power options, a lithium polymer battery charger, a user interface consisting of 4 LEDs, 2 buttons, and 2 DIP switches, an FTDI-cable compatible UART header, and JTAG-SWD for flashing and debugging. Its [BOM](#bill-of-materials) cost totals to under $15 USD. The arm-bmw is open hardware (CC-BY-4.0 license) and open source (MIT license).
+The arm-bmw is suitable for a general purpose embedded controller and a battery-powered data logger. It features lithium polymer battery and USB power options, a lithium polymer battery charger, an onboard 2-megabyte flash memory for storage, a user interface consisting of 4 LEDs, 2 buttons, and 2 DIP switches, an FTDI-cable compatible UART header, JTAG-SWD for flashing and debugging, and 16 assorted I/O for connectivity. Its [BOM](#bill-of-materials) cost totals to under $15 USD. The arm-bmw is open hardware (CC-BY-4.0 license) and open source (MIT license).
 
 Specifications:
 
@@ -88,6 +88,8 @@ Free software to drive the I2C bus, MCP23008 chip, and manage the UI is avaiable
 The LPC1114 microcontroller has an on-chip 12MHz RC oscillator and PLL, which can be configured to provide a 48MHz system clock with no external parts. The arm-bmw also provides pads for an external HC49UP crystal and load capacitors in cases where a more accurate oscillator is required.
 
 ### I/O Header Pinout
+
+The I/O header exposes one I2C bus (SDA, SCL), one SPI bus (MISO, MOSI, SCK), and 11 additional pins that may be used as digital I/O, ADC inputs, timer capture inputs, or PWM outputs, depending on the pin's supported functions.
 
 | BMW Pin | uC Pin  | uC Pin Functions                  | Notes                             |
 |---------|---------|-----------------------------------|-----------------------------------|
@@ -191,11 +193,11 @@ The arm-bmw-sw project includes a testing suite to verify correct operation of t
 
 ## Datasheets
 
-* ARM Cortex-M0 MCU: LPC1114FDH28 [site](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/lpc1100/LPC1114FDH28.html), [datasheet](http://www.nxp.com/documents/data_sheet/LPC111X.pdf), [user manual](http://www.nxp.com/documents/user_manual/UM10398.pdf)
-* SPI Flash Memory: S25FL216K [datasheet](http://www.spansion.com/Support/Datasheets/S25FL216K_00.pdf)
-* I2C I/O Expander: MCP23008 [site](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP23008), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)
-* 3.3V DC/DC Converter: MCP1252 [site](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP1252), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21752B.pdf)
-* LiPo Charge Controller: MCP73831T [site](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf)
+* ARM Cortex-M0 MCU, LPC1114FDH28: [site](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/lpc1100/LPC1114FDH28.html), [datasheet](http://www.nxp.com/documents/data_sheet/LPC111X.pdf), [user manual](http://www.nxp.com/documents/user_manual/UM10398.pdf)
+* SPI Flash Memory, S25FL216K: [datasheet](http://www.spansion.com/Support/Datasheets/S25FL216K_00.pdf)
+* I2C I/O Expander, MCP23008: [site](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP23008), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)
+* 3.3V DC/DC Converter, MCP1252: [site](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP1252), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21752B.pdf)
+* LiPo Charge Controller, MCP73831T: [site](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903), [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf)
 
 ## Change Log
 
