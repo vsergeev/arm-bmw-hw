@@ -12,6 +12,16 @@ Git: `git clone http://git.theanine.io/arm-bmw-hw.git`
 
 GitHub: https://github.com/vsergeev/arm-bmw-hw
 
+## Software Sources
+
+Git: `git clone https://github.com/vsergeev/arm-bmw-sw.git`
+
+Git: `git clone http://git.theanine.io/arm-bmw-sw.git`
+
+GitHub: https://github.com/vsergeev/arm-bmw-sw
+
+The arm-bmw-sw project includes a testing suite to verify the correct operation of the UART, SPI, I2C, SPI Flash, I/O Expander, LEDs, and Buttons.
+
 ## Photos
 
 [![](images/top1.800px.jpg)](https://raw.githubusercontent.com/vsergeev/arm-bmw-hw/master/images/top1.800px.jpg)
@@ -132,16 +142,6 @@ Compatible with the [FTDI TTL-232R-3V3 cable](http://www.ftdichip.com/Products/C
 | `uC RX` | `PIO1_6` | `PIO1_6/RXD/CT32B0_MAT0`          |                                   |
 | `uC TX` | `PIO1_7` | `PIO1_7/TXD/CT32B0_MAT1`          |                                   |
 | `NC`    | -        | -                                 |                                   |
-
-## Software Library Sources
-
-Git: `git clone https://github.com/vsergeev/arm-bmw-sw.git`
-
-Git: `git clone http://git.theanine.io/arm-bmw-sw.git`
-
-GitHub: https://github.com/vsergeev/arm-bmw-sw
-
-The arm-bmw-sw project includes a testing suite to verify correct operation of the UART, SPI, I2C, SPI Flash, I/O Expander, LEDs, and Buttons.
 
 ## Schematic, Board, BOM
 
