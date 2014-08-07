@@ -4,24 +4,6 @@ The ARM Bare Metal Widget (arm-bmw) is an open hardware Cortex-M0 development bo
 
 The arm-bmw features a small 70 x 43mm footprint, lithium polymer battery and USB power selection, a lithium polymer battery charger, a 2-megabyte Flash memory for data storage, a basic user interface, an FTDI-cable compatible UART header, JTAG-SWD for flashing and debugging, and 16 assorted I/O for connectivity. Its [BOM](#bill-of-materials) totals to under $15 USD. The arm-bmw is open hardware (CC-BY-4.0 licensed) and open source (MIT licensed).
 
-## Hardware Sources
-
-Git: `git clone https://github.com/vsergeev/arm-bmw-hw.git`
-
-Git: `git clone http://git.theanine.io/arm-bmw-hw.git`
-
-GitHub: <https://github.com/vsergeev/arm-bmw-hw>
-
-## Software Sources
-
-Git: `git clone https://github.com/vsergeev/arm-bmw-sw.git`
-
-Git: `git clone http://git.theanine.io/arm-bmw-sw.git`
-
-GitHub: <https://github.com/vsergeev/arm-bmw-sw>
-
-The arm-bmw-sw project includes a testing suite to verify the correct operation of the UART, SPI, I2C, SPI Flash, I/O Expander, LEDs, and Buttons.
-
 ## Photos
 
 [![](images/top1.800px.jpg)](https://raw.githubusercontent.com/vsergeev/arm-bmw-hw/master/images/top1.800px.jpg)
@@ -58,6 +40,24 @@ The arm-bmw-sw project includes a testing suite to verify the correct operation 
     * Hand-solderable packages
 
 See the [datasheets](#datasheets) section below for links to part datasheets.
+
+## Hardware Sources
+
+Git: `git clone https://github.com/vsergeev/arm-bmw-hw.git`
+
+Git: `git clone http://git.theanine.io/arm-bmw-hw.git`
+
+GitHub: <https://github.com/vsergeev/arm-bmw-hw>
+
+## Software Sources
+
+Git: `git clone https://github.com/vsergeev/arm-bmw-sw.git`
+
+Git: `git clone http://git.theanine.io/arm-bmw-sw.git`
+
+GitHub: <https://github.com/vsergeev/arm-bmw-sw>
+
+The arm-bmw-sw project includes a testing suite to verify the correct operation of the UART, SPI, I2C, SPI Flash, I/O Expander, LEDs, and Buttons.
 
 ## Details and Pinout
 
