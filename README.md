@@ -69,7 +69,9 @@ The arm-bmw-sw project includes a testing suite to verify the correct operation 
 
 ### Power and Charging
 
-The arm-bmw provides a female JST-PH connector to accept a 3.7V lithium polymer battery, and a USB mini-B connector to accept 5V power from USB. The USB mini-B connector is only used for power, not data. A 3-position slide switch on the front selects between off, battery power, and USB power. The red Power LED indicates that 3.3V is present and that the arm-bmw is on. The orange Charge LED indicates that the lithium polymer battery is being charged from 5V USB power.
+The arm-bmw provides a female JST-PH connector to accept a 3.7V lithium polymer battery, and a USB mini-B connector to accept 5V power from USB. The USB mini-B connector is only used for power and charging, not data.
+
+A 3-position slide switch on the front selects between off, battery power, and USB power. The red Power LED indicates that 3.3V is present and that the arm-bmw is on. The orange Charge LED indicates that the lithium polymer battery is being charged from 5V USB power.
 
 The onboard [MCP1252](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP1252) switched capacitor DC/DC converter regulates a 2V to 5.5V input to 3.3V, automatically switching between step down and step up operation as needed to provide 3.3V. This provides continuous power from a 3.7V lithium polymer battery as it drains to below 3.3V volts. The voltage regulator has a maximum output current of 120mA, so the arm-bmw should not be used to drive heavy loads alone.
 
@@ -83,19 +85,19 @@ The arm-bmw also supports programming over UART with its on-chip ROM bootloader.
 
 ### SPI Flash Memory
 
-The arm-bmw features a S25FL216K 16-MBit (2-MByte) SPI Flash for non-volatile storage in data logging applications. This SPI device is connected to the SPI0 controller of the microcontroller, sharing the MOSI, MISO, and SCK pins that are available on the main [I/O header](#io-header-pinout). One microcontroller pin (`PIO0_2/SSEL0`) is dedicated to controlling its chip select.
+The arm-bmw features a S25FL216K 16-MBit (2-MByte) SPI Flash for non-volatile storage in data logging applications. This SPI device is connected to the SPI0 controller of the microcontroller, sharing the MOSI, MISO, and SCK pins with the main [I/O header](#io-header-pinout). One microcontroller pin (`PIO0_2/SSEL0`) is dedicated to controlling its chip select.
 
 ### User Interface
 
-The arm-bmw features a basic user interface, consisting of 4 LEDs, 2 push buttons, and 2 DIP switches. These 4 outputs and 4 inputs (8 I/Os total) are managed by an [MCP23008](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP23008) I2C I/O expander to conserve I/O pins on the microcontroller. The MCP23008 is connected to the I2C bus of the microcontroller, sharing the SDA and SCL pins that are available on the main [I/O header](#io-header-pinout). In addition, one microcontroller pin (`PIO0_3`) is dedicated to the MCP23008 interrupt. The push buttons and DIP switches are debounced in hardware with an RC filter, to ensure that the MCP23008 interrupt is not spurious and to minimize the need for software debouncing.
+The arm-bmw features a basic user interface, consisting of 4 LEDs, 2 push buttons, and 2 DIP switches. These 4 outputs and 4 inputs (8 I/Os total) are managed by an [MCP23008](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP23008) I2C I/O expander to conserve I/O pins on the microcontroller. The MCP23008 is connected to the I2C bus of the microcontroller, sharing the SDA and SCL pins with the main [I/O header](#io-header-pinout). In addition, one microcontroller pin (`PIO0_3`) is dedicated to the MCP23008 interrupt. The push buttons and DIP switches are debounced in hardware with an RC filter, to ensure that the MCP23008 interrupt is not spurious and to minimize the need for software debouncing.
 
-The I2C address of the MCP23008 is configured by populating three 0-ohm jumpers on the back of the board, in either a 0 or 1 position, which pull down or up the MCP23008's A0, A1, A2 pins. By default, these three jumpers are in the 0 position, and the MCP23008 has an address of `0x20` on the I2C bus.
+The I2C address of the MCP23008 is configured by populating three 0-ohm jumpers on the back of the board, in either a 0 or 1 position, which pull down or up the MCP23008's A0, A1, A2 address pins. By default, these three jumpers are in the 0 position, so the MCP23008 has an address of `0x20` on the I2C bus.
 
 Free software to drive the I2C bus, MCP23008 chip, and manage the UI is avaiable in the [arm-bmw-sw library](#software-sources).
 
-### Optional Settings
+### System Clock
 
-The LPC1114 microcontroller has an on-chip 12MHz RC oscillator, which can be configured with the internal PLL to provide a 48MHz system clock using no external parts. The arm-bmw also provides pads for an external HC49UP crystal and load 0805 capacitors in cases where a more accurate oscillator or a different multiple is required.
+The LPC1114 microcontroller has an on-chip 12MHz RC oscillator, which can be configured with the internal PLL to provide a 48MHz system clock using no external parts -- this is the default configuration. The arm-bmw also provides pads for an external HC49UP crystal and 0805 load capacitors for cases where a more accurate oscillator or a different multiple is required.
 
 ### I/O Header Pinout
 
