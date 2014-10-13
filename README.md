@@ -4,6 +4,8 @@ The ARM Bare Metal Widget (arm-bmw) is an open hardware Cortex-M0 development bo
 
 The arm-bmw features a small 70 x 43mm footprint, lithium polymer battery and USB power selection, a lithium polymer battery charger, a 2-megabyte Flash memory for data storage, a basic user interface, an FTDI-cable compatible UART header, JTAG-SWD for flashing and debugging, and 16 assorted I/O for connectivity. Its [BOM](#bill-of-materials) totals to under $15 USD. The arm-bmw is open hardware (CC-BY-4.0 licensed) and open source (MIT licensed).
 
+Order 3 PCBs from [OSH Park](https://oshpark.com/) for $23.30 ($7.77 per board): <https://oshpark.com/shared_projects/iBdyoHro>
+
 ## Photos
 
 [![](images/top1.800px.jpg)](https://raw.githubusercontent.com/vsergeev/arm-bmw-hw/master/images/top1.800px.jpg)
@@ -157,39 +159,43 @@ Compatible with the [FTDI TTL-232R-3V3 cable](http://www.ftdichip.com/Products/C
 
 ### Bill of Materials
 
-| Qty   | Part                                      | Description           | Digi-key PN               | Order Qty     | Total Price |
-|:------|:------------------------------------------|:----------------------|:--------------------------|:--------------|:------------|
-| 1     | U1                                      | ARM Cortex-M0 MCU     | Arrow LPC1114FDH28/102:5  | 1             | ~2.50       |
-| 1     | U2                                      | SPI Flash Memory      | 1274-1052-ND              | 1             | 0.32        |
-| 1     | U3                                      | I2C I/O Expander      | MCP23008-E/SO-ND          | 1             | 1.22        |
-| 1     | U4                                      | 3.3V Regulator        | MCP1252-33X50I/MS-ND      | 1             | 1.64        |
-| 1     | U5                                      | LiPo Charger          | MCP73831T-2ACI/OTCT-ND    | 1             | 0.67        |
-| 8     | C3, C4, C5, C6, C10, C11, C13, C14             | C 0805 0.1uF          | 1276-1099-1-ND            | 10            | 0.44        |
-| 2     | C9, C12                                  | C 0805 1uF            | 1276-1066-1-ND            | 5             | 0.50        |
-| 2     | C15, C16                                 | C 0805 4.7uF          | 1276-1244-1-ND            | 5             | 0.75        |
-| 2     | C7, C8                                   | C 1206 10uF           | 1276-1075-1-ND            | 5             | 1.15        |
-| 8     | R1, R7, R8, R9, R14, R15, R16, R17, R18, R19, R27 | R 0805 10k            | 1276-5332-1-ND            | 15            | 0.30        |
-| 4     | R10, R11, R12, R13                         | R 0805 100k           | 1276-3512-1-ND            | 10            | 0.20        |
-| 6     | R20, R21, R22, R23, R24, R25                 | R 0603 0 jumper       | RHM0.0CGCT-ND             | 10            | 0.10        |
-| 4     | LED1, LED2, LED3, LED4                     | Green LED             | 475-1410-1-ND             | 5             | 0.40        |
-| 1     | LED_PWR                                 | Red LED               | 475-1415-1-ND             | 2             | 0.16        |
-| 1     | LED_CHG                                 | Orange LED            | 754-1130-1-ND             | 2             | 0.40        |
-| 5     | R2, R3, R4, R5, R6, R26                      | R 0805 for LED 1.5k   | 1276-5533-1-ND            | 10            | 0.18        |
-| 1     | CON_BAT                                 | JST-PH Connector      | 455-1749-1-ND             | 1             | 0.56        |
-| 1     | CON_USB                                 | USB Mini-B Connector  | 151-1206-1-ND             | 1             | 0.41        |
-| 1     | JP_*,TP_*                               | 40p header break-away | S1012EC-30-ND             | 1             | 0.48        |
-| 1     | JP_UART                                 | 6p header right angle | S1112EC-06-ND             | 1             | 0.23        |
-| 1     | SW_PWR                                  | Slide switch          | 563-1095-1-ND             | 1             | 0.63        |
-| 2     | SW_B0, SW_B1                             | Tactile switch        | 450-1792-1-ND             | 2             | 0.40        |
-| 1     | SW_DIP                                  | 2-pos DIP switch      | 450-2045-ND               | 1             | 0.81        |
-| 1 OPT | BATTERY                                 | 3.7V LiPo Battery     | SparkFun [PRT-00731](https://www.sparkfun.com/products/731) | 1 | 4.95 |
-| DNP   | STANDOFF                                | 10mm Nylon Standoff   | 25510K-ND                 | 4             | -           |
-| DNP   | STANDOFF SCREW                          | 7mm Nylon Screw       | 29341K-ND                 | 4             | -           |
-| DNP   | C1, C2                                   | C 0805 xtal load caps | -                         | -             | -           |
-| DNP   | Q1                                      | Crystal               | -                         | -             | -           |
-|       | **Grand Total**                           |                       |                           |               | **$14.45**  |
+| Qty   | Part                                              | Description           | Part Number                       | Order Qty     | Total Price |
+|:------|:--------------------------------------------------|:----------------------|:----------------------------------|:--------------|:------------|
+| 1     | U1                                                | ARM Cortex-M0 MCU     | Arrow LPC1114FDH28/102:5          | 1             | 3.07        |
+| 1     | U2                                                | SPI Flash Memory      | Digi-key 1274-1052-ND             | 1             | 0.32        |
+| 1     | U3                                                | I2C I/O Expander      | Digi-key MCP23008-E/SO-ND         | 1             | 1.22        |
+| 1     | U4                                                | 3.3V Regulator        | Digi-key MCP1252-33X50I/MS-ND     | 1             | 1.64        |
+| 1     | U5                                                | LiPo Charger          | Digi-key MCP73831T-2ACI/OTCT-ND   | 1             | 0.67        |
+| 8     | C3, C4, C5, C6, C10, C11, C13, C14                | C 0805 0.1uF          | Digi-key 1276-1099-1-ND           | 10            | 0.44        |
+| 2     | C9, C12                                           | C 0805 1uF            | Digi-key 1276-1066-1-ND           | 5             | 0.50        |
+| 2     | C15, C16                                          | C 0805 4.7uF          | Digi-key 1276-1244-1-ND           | 5             | 0.75        |
+| 2     | C7, C8                                            | C 1206 10uF           | Digi-key 1276-1075-1-ND           | 5             | 1.15        |
+| 8     | R1, R7, R8, R9, R14, R15, R16, R17, R18, R19, R27 | R 0805 10k            | Digi-key 1276-5332-1-ND           | 15            | 0.30        |
+| 4     | R10, R11, R12, R13                                | R 0805 100k           | Digi-key 1276-3512-1-ND           | 10            | 0.20        |
+| 6     | R20, R21, R22, R23, R24, R25                      | R 0603 0 jumper       | Digi-key RHM0.0CGCT-ND            | 10            | 0.10        |
+| 4     | LED1, LED2, LED3, LED4                            | Green LED             | Digi-key 475-1410-1-ND            | 5             | 0.40        |
+| 1     | LED_PWR                                           | Red LED               | Digi-key 475-1415-1-ND            | 2             | 0.16        |
+| 1     | LED_CHG                                           | Orange LED            | Digi-key 754-1130-1-ND            | 2             | 0.40        |
+| 5     | R2, R3, R4, R5, R6, R26                           | R 0805 for LED 1.5k   | Digi-key 1276-5533-1-ND           | 10            | 0.18        |
+| 1     | CON_BAT                                           | JST-PH Connector      | Digi-key 455-1749-1-ND            | 1             | 0.56        |
+| 1     | CON_USB                                           | USB Mini-B Connector  | Digi-key 151-1206-1-ND            | 1             | 0.41        |
+| 1     | JP_*,TP_*                                         | 40p header break-away | Digi-key S1012EC-30-ND            | 1             | 0.48        |
+| 1     | JP_UART                                           | 6p header right angle | Digi-key S1112EC-06-ND            | 1             | 0.23        |
+| 1     | SW_PWR                                            | Slide switch          | Digi-key 563-1095-1-ND            | 1             | 0.63        |
+| 2     | SW_B0, SW_B1                                      | Tactile switch        | Digi-key 450-1792-1-ND            | 2             | 0.40        |
+| 1     | SW_DIP                                            | 2-pos DIP switch      | Digi-key 450-2045-ND              | 1             | 0.81        |
+| 1 OPT | BATTERY                                           | 3.7V LiPo Battery     | SparkFun [PRT-00731](https://www.sparkfun.com/products/731) | 1 | 4.95 |
+| 4 OPT | STANDOFF                                          | 10mm Nylon Standoff   | Digi-key 25510K-ND                | 4             | 2.36        |
+| 4 OPT | STANDOFF SCREW                                    | 7mm Nylon Screw       | Digi-key 29341K-ND                | 4             | 0.76        |
+| DNP   | C1, C2                                            | C 0805 xtal load caps | -                                 | -             | -           |
+| DNP   | Q1                                                | Crystal               | -                                 | -             | -           |
+|       | **Parts Total**                                   |                       |                                   |               | **$15.02**  |
 
-Note: the grand total does not include the PCB fabrication, LiPo battery, or standoffs.
+The parts total does not include the PCB, LiPo battery, or standoffs.
+
+Order 3 PCBs from [OSH Park](https://oshpark.com/) for $23.30 ($7.77 per board): <https://oshpark.com/shared_projects/iBdyoHro>
+
+The unit price of a complete arm-bmw comes out to $22.79, with the BOM parts above and PCBs from OSH Park.
 
 ## Datasheets
 
