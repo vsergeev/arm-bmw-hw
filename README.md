@@ -47,15 +47,11 @@ See the [datasheets](#datasheets) section below for links to part datasheets.
 
 Git: `git clone https://github.com/vsergeev/arm-bmw-hw.git`
 
-Git: `git clone http://git.theanine.io/arm-bmw-hw.git`
-
 GitHub: <https://github.com/vsergeev/arm-bmw-hw>
 
 ## Software Sources
 
 Git: `git clone https://github.com/vsergeev/arm-bmw-sw.git`
-
-Git: `git clone http://git.theanine.io/arm-bmw-sw.git`
 
 GitHub: <https://github.com/vsergeev/arm-bmw-sw>
 
